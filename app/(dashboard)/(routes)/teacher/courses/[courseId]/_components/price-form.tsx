@@ -19,7 +19,8 @@ import {
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input"
+import { formatPrice } from "@/lib/format";
 
 interface PriceFormProps {
   initialData: Course;
@@ -78,9 +79,11 @@ export const PriceForm = ({
       {!isEditing && (
         <p className={cn(
           "text-sm mt-2",
-          !initialData.description && "text-slate-500 italic"
+          !initialData.price && "text-slate-500 italic"
         )}>
-          {initialData.description || "No description"}
+          {initialData.price
+          ? formatPrice(initialData.price)
+          : "No price"}
         </p>
       )}
       {isEditing && (
@@ -95,9 +98,11 @@ export const PriceForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Textarea
+                    <Input
+                      type="number"
+                      step="0.01"
                       disabled={isSubmitting}
-                      placeholder="e.g. 'This course is about...'"
+                      placeholder="Set a price for your coruse'"
                       {...field}
                     />
                   </FormControl>
