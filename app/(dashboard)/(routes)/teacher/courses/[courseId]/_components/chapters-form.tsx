@@ -20,6 +20,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
+import { ChaptersList } from "./chapters-list";
 
 
 
@@ -142,7 +143,10 @@ export const ChaptersForm = ({
           !initialData.chapters.length && "text-slate-500 italic"
         )}>
           {!initialData.chapters.length && "No chapters"}
-          
+          <ChaptersList
+          onEdit={()=> {}}
+          onReorder={onReorder}
+          items={initialData.chapters || []}/>
         </div>
       )}
       {!isCreating && (
