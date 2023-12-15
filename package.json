@@ -48,12 +48,8 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.12.0",
     "react-quill": "^2.0.0",
-<<<<<<< HEAD
     "recharts": "^2.10.3",
     "stripe": "^14.9.0",
-=======
-    "stripe": "^14.8.0",
->>>>>>> 9c2149202bd8147bcaf03280cb9e793eb4a3c424
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
