@@ -9,12 +9,6 @@ import { Preview } from "@/components/preview";
 
 import { VideoPlayer } from "./_components/video-player";
 import { CourseEnrollButton } from "./_components/course-enroll-button";
-<<<<<<< HEAD
-import { Separator } from "@/components/ui/separator";
-import { Preview } from "@/components/preview";
-import { File } from "lucide-react";
-=======
->>>>>>> 9c2149202bd8147bcaf03280cb9e793eb4a3c424
 import { CourseProgressButton } from "./_components/course-progress-button";
 
 const ChapterIdPage = async ({
@@ -81,55 +75,25 @@ const ChapterIdPage = async ({
             <h2 className="text-2xl font-semibold mb-2">
               {chapter.title}
             </h2>
-            {
-                purchase ? (
-                    <CourseProgressButton
-                    chapterId={params.chapterId}
-                    courseId={params.courseId}
-                    nextChapterId={nextChapter?.id}
-<<<<<<< HEAD
-                    playbackId={muxData?.playbackId!}
-                    isLocked={isLocked}
-                    completeOnEnd={completeOnEnd}/>
-                </div>
-                <div>
-                    <div className="p-4 flex flex-col md:flex-row items-center justify-between">
-                        <h2 className="text-2xl font-semibold mb-2">
-                            {chapter.title}
-                        </h2>
-                        {purchase ? (
-                            <CourseProgressButton
-                            chapterId={params.chapterId}
-                            courseId={params.courseId}
-                            nextChapterId={nextChapter?.id}
-                            isCompleted={!!userProgress?.isCompleted}/>
-                        ): (
-                            <CourseEnrollButton
-                            courseId={params.courseId}
-                            price={course.price!}/>
-                        )}
-                    </div>
-                    <Separator />
-                    <div>
-                        {chapter.description!}
-                    </div>
-                    {!!attachments.length && (
-=======
-                    isCompleted={!!userProgress?.isCompleted}/> 
-                ): (
-                  <CourseEnrollButton
+            {purchase ? (
+              <CourseProgressButton
+                chapterId={params.chapterId}
+                courseId={params.courseId}
+                nextChapterId={nextChapter?.id}
+                isCompleted={!!userProgress?.isCompleted}
+              />
+            ) : (
+              <CourseEnrollButton
                 courseId={params.courseId}
                 price={course.price!}
-              />  
-                )
-            }
+              />
+            )}
           </div>
           <Separator />
           <div>
-            {chapter.description!}
+          {chapter.description!}
           </div>
           {!!attachments.length && (
->>>>>>> 9c2149202bd8147bcaf03280cb9e793eb4a3c424
             <>
               <Separator />
               <div className="p-4">
@@ -149,11 +113,6 @@ const ChapterIdPage = async ({
               </div>
             </>
           )}
-<<<<<<< HEAD
-                </div>
-            </div>
-=======
->>>>>>> 9c2149202bd8147bcaf03280cb9e793eb4a3c424
         </div>
       </div>
     </div>
