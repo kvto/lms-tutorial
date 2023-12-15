@@ -41,5 +41,8 @@ export async function POST(req: Request) {
   }
 
   return new NextResponse(null, { status: 200 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9c2149202bd8147bcaf03280cb9e793eb4a3c424
 }

@@ -48,10 +48,17 @@ export const CourseCard = ({
                     </div>
                 </div>
                 {progress !== null ? (
+<<<<<<< HEAD
                     <CourseProgress 
                     variant={progress === 100 ? "success" : "default"}
                     size="sm"
                     value={progress}/>
+=======
+                            <CourseProgress 
+                            variant={progress === 100 ? "success" : "default"}
+                            size="sm"
+                            value={progress}/>
+>>>>>>> 9c2149202bd8147bcaf03280cb9e793eb4a3c424
                 ) : (
                     <p className="text-md md:text-sm font-medium text-slate-700">
                         {formatPrice(price)}    
